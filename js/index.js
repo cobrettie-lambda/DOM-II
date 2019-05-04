@@ -5,10 +5,10 @@
 let fontColor = '#212529';
 let buttonBg = '#17A2B8';
 let mainBg = '#fff';
-let navigationBorder = #C0C0C0;
-let footerBg = '#FFEBCD'
-let sandyBeach = '#FFEBCD'
-let easternBlue = '#17A2B8'
+let navigationBorder = '#C0C0C0';
+let footerBg = '#FFEBCD';
+let sandyBeach = '#FFEBCD';
+let easternBlue = '#17A2B8';
 
 
 // Selectors
@@ -152,10 +152,10 @@ destinationH4.forEach(node => {
 });
 
 
-// Add event #10: right click the footer to change its background color
+// Add event #10: right click the footer to change its background color, left click again to revert to original color
 footer.addEventListener('contextmenu', (event) => {
     event.target.style.backgroundColor = 'dodgerblue';
 });
 footer.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = '@sandy-beach';
+    event.target.style.backgroundColor = '#FFEBCD';
 });
