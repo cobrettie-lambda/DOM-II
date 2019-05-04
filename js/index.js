@@ -23,10 +23,12 @@ logoHeadHover.addEventListener('mouseover', function (e) {
     e.target.style.fontSize = '5rem';
     e.target.style.cursor = 'pointer';
     e.target.style.transitionDuration = '.2s';
+    e.target.style.color = 'dodgerblue';
 
 });
 logoHeadHover.addEventListener('mouseleave', function (e) {
     e.target.style.fontSize = '';
+    e.target.style.color = 'black';
 });
 
 
@@ -35,7 +37,7 @@ logoHeadHover.addEventListener('mouseleave', function (e) {
 navItems.forEach(function (item) {
     item.addEventListener('mouseover', function (event) {
         event.target.style.color = 'dodgerblue'
-        event.target.style.fontSize = '2rem';
+        event.target.style.fontSize = '2.2rem';
         event.target.style.transitionDuration = '.2s';
         event.preventDefault();
 
@@ -92,7 +94,13 @@ window.addEventListener("scroll", function (event) {
 });
 
 
-//Add event: resize
+// Add event #6: resize - when resizing the browser window, an alert will show
 window.addEventListener("resize", function (event) {
     alert("You have activated the resizing alert. Hello again :)");
+});
+
+
+//Add event #7: load - when the page loads successfully, a message is logged to the console
+window.addEventListener("load", function (event) {
+    console.log("Fun Bus has loaded successfully. Enjoy our content!");
 });
