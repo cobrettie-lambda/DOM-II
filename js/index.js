@@ -1,7 +1,18 @@
 // Your code goes here
 
 
+// Color Assignments
+let fontColor = '#212529';
+let buttonBg = '#17A2B8';
+let mainBg = '#fff';
+let navigationBorder = #C0C0C0;
+let footerBg = '#FFEBCD'
+let sandyBeach = '#FFEBCD'
+let easternBlue = '#17A2B8'
+
+
 // Selectors
+
 
 let logoHeadHover = document.querySelector('.nav-container .logo-heading');
 let navItems = document.querySelectorAll('.nav-link');
@@ -13,6 +24,7 @@ let scaleImg3 = document.querySelector('.img-fluid');
 let scaleImg4 = document.querySelector('.content-destination img');
 let destinationH4 = document.querySelectorAll('.destination h4');
 let buttons = document.querySelectorAll('.btn');
+let footer = document.querySelector('footer');
 
 
 
@@ -137,4 +149,13 @@ destinationH4.forEach(node => {
     node.addEventListener('mouseout', (event => {
         event.target.style.color = 'black';
     }));
+});
+
+
+// Add event #10: right click the footer to change its background color
+footer.addEventListener('contextmenu', (event) => {
+    event.target.style.backgroundColor = 'dodgerblue';
+});
+footer.addEventListener('click', (event) => {
+    event.target.style.backgroundColor = '@sandy-beach';
 });
