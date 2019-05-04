@@ -3,12 +3,14 @@
 
 // Selectors
 
-const logoHeadHover = document.querySelector('.nav-container .logo-heading');
-const navItemHover = document.querySelector('.nav');
-const scaleImg = document.querySelector('img');
-const scaleImg2 = document.querySelector('.img-content img');
-const scaleImg3 = document.querySelector('.img-fluid');
-const scaleImg4 = document.querySelector('.content-destination img');
+let logoHeadHover = document.querySelector('.nav-container .logo-heading');
+let navItemHover = document.querySelector('.nav');
+let images = document.querySelectorAll('img');
+let scaleImg = document.querySelector('img');
+let scaleImg2 = document.querySelector('.img-content img');
+let scaleImg3 = document.querySelector('.img-fluid');
+let scaleImg4 = document.querySelector('.content-destination img');
+
 
 
 // Events
@@ -57,4 +59,29 @@ scaleImg3.addEventListener('dblclick', function () {
 
 scaleImg4.addEventListener('dblclick', function () {
     scaleImg4.classList.toggle('large');
+});
+
+
+// Add event: Add opacity to images when mouseover is active, remove opacity when mouseleave is active
+images.forEach(function (img) {
+    img.addEventListener('mouseenter', function (item) {
+        img.style.opacity = '.3';
+        img.style.cursor = 'pointer';
+    });
+    img.addEventListener('mouseleave', function (item) {
+        img.style.opacity = '1';
+    });
+});
+
+
+
+
+let counter = 0;
+window.addEventListener("scroll", function (event) {
+    console.log("scroll!");
+    counter++;
+    if (counter > 200) {
+        alert("You've scrolled too much!!");
+        counter = 0;
+    }
 });
