@@ -54,20 +54,27 @@ navItems.forEach(function (item) {
 // Add event #3: dblclick and transform for all images on page
 // double click any image to transform its size, double click again to return to normal
 
-scaleImg.addEventListener('dblclick', function () {
-    scaleImg.classList.toggle('large');
-});
+// scaleImg.addEventListener('dblclick', function () {
+//     scaleImg.classList.toggle('large');
+// });
 
-scaleImg2.addEventListener('dblclick', function () {
-    scaleImg2.classList.toggle('large');
-});
+// scaleImg2.addEventListener('dblclick', function () {
+//     scaleImg2.classList.toggle('large');
+// });
 
-scaleImg3.addEventListener('dblclick', function () {
-    scaleImg3.classList.toggle('large');
-});
+// scaleImg3.addEventListener('dblclick', function () {
+//     scaleImg3.classList.toggle('large');
+// });
 
-scaleImg4.addEventListener('dblclick', function () {
-    scaleImg4.classList.toggle('large');
+// scaleImg4.addEventListener('dblclick', function () {
+//     scaleImg4.classList.toggle('large');
+// });
+
+// reformated the code directly above
+images.forEach(function (img) {
+    img.addEventListener('dblclick', function () {
+        img.classList.toggle('large');
+    });
 });
 
 
