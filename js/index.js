@@ -4,6 +4,7 @@
 // Selectors
 
 let logoHeadHover = document.querySelector('.nav-container .logo-heading');
+let navItems = document.querySelectorAll('.nav-link');
 let navItemHover = document.querySelector('.nav');
 let images = document.querySelectorAll('img');
 let scaleImg = document.querySelector('img');
@@ -31,14 +32,19 @@ logoHeadHover.addEventListener('mouseleave', function (e) {
 
 // Add event: mouseover, mouseleave for nav-items
 
-navItemHover.addEventListener('mouseover', function (e) {
-    e.target.style.color = 'dodgerblue';
-    e.target.style.fontSize = '2rem';
-    e.target.style.transitionDuration = '.2s';
-});
-navItemHover.addEventListener('mouseout', function (e) {
-    e.target.style.color = 'black';
-    e.target.style.fontSize = '1.6rem';
+navItems.forEach(function (item) {
+    item.addEventListener('mouseover', function (event) {
+        event.target.style.color = 'dodgerblue'
+        event.target.style.fontSize = '2rem';
+        event.target.style.transitionDuration = '.2s';
+        event.preventDefault();
+
+    });
+    item.addEventListener('mouseout', function (event) {
+        event.target.style.color = 'black';
+        event.target.style.fontSize = '';
+        event.preventDefault();
+    });
 });
 
 
