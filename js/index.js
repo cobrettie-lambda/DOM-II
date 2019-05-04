@@ -80,6 +80,9 @@ images.forEach(function (img) {
     img.addEventListener('mouseleave', function (item) {
         img.style.opacity = '1';
     });
+    img.addEventListener('dblclick', function () {
+        img.style.opacity = '1';
+    });
 });
 
 
