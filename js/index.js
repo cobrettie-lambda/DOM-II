@@ -11,6 +11,7 @@ let scaleImg = document.querySelector('img');
 let scaleImg2 = document.querySelector('.img-content img');
 let scaleImg3 = document.querySelector('.img-fluid');
 let scaleImg4 = document.querySelector('.content-destination img');
+let destinationH4 = document.querySelectorAll('.destination h4');
 let buttons = document.querySelectorAll('.btn');
 
 
@@ -19,7 +20,6 @@ let buttons = document.querySelectorAll('.btn');
 
 
 // Add event #1: mouseover, mouseleave for Fun Bus logo
-
 logoHeadHover.addEventListener('mouseover', function (event) {
     event.target.style.fontSize = '5rem';
     event.target.style.cursor = 'pointer';
@@ -34,7 +34,6 @@ logoHeadHover.addEventListener('mouseleave', function (event) {
 
 
 // Add event #2: mouseover, mouseleave for nav-items
-
 navItems.forEach(function (item) {
     item.addEventListener('mouseover', function (event) {
         event.target.style.color = 'dodgerblue'
@@ -126,4 +125,16 @@ buttons.forEach(function (btn) {
     btn.addEventListener('click', function (event) {
         alert('We will be in touch with you shortly!');
     });
+});
+
+
+// Add event #9: 
+destinationH4.forEach(node => {
+    node.addEventListener('mousemove', (event) => {
+        event.target.style.color = 'dodgerblue';
+        event.target.style.cursor = 'default';
+    });
+    node.addEventListener('mouseout', (event => {
+        event.target.style.color = 'black';
+    }));
 });
