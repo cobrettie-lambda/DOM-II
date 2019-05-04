@@ -1,7 +1,21 @@
 // Your code goes here
 
-// mouseover, mouseleave for Fun Bus logo
+
+// Selectors
+
 const logoHeadHover = document.querySelector('.nav-container .logo-heading');
+const navItemHover = document.querySelector('.nav');
+const scaleImg = document.querySelector('img');
+const scaleImg2 = document.querySelector('.img-content img');
+const scaleImg3 = document.querySelector('.img-fluid');
+const scaleImg4 = document.querySelector('.content-destination img');
+
+
+// Events
+
+
+// Add event: mouseover, mouseleave for Fun Bus logo
+
 logoHeadHover.addEventListener('mouseover', function (e) {
     e.target.style.fontSize = '5rem';
     e.target.style.cursor = 'pointer';
@@ -13,8 +27,8 @@ logoHeadHover.addEventListener('mouseleave', function (e) {
 });
 
 
-// mouseover, mouseleave for nav-items
-const navItemHover = document.querySelector('.nav');
+// Add event: mouseover, mouseleave for nav-items
+
 navItemHover.addEventListener('mouseover', function (e) {
     e.target.style.color = 'dodgerblue';
     e.target.style.fontSize = '2rem';
@@ -26,24 +40,21 @@ navItemHover.addEventListener('mouseout', function (e) {
 });
 
 
-// dblclick and transform for all images on page
+// Add event: dblclick and transform for all images on page
 // double click any image to transform its size, double click again to return to normal
-const scaleImg = document.querySelector('img');
+
 scaleImg.addEventListener('dblclick', function () {
     scaleImg.classList.toggle('large');
 });
 
-const scaleImg2 = document.querySelector('.img-content img');
 scaleImg2.addEventListener('dblclick', function () {
     scaleImg2.classList.toggle('large');
 });
 
-const scaleImg3 = document.querySelector('.img-fluid');
 scaleImg3.addEventListener('dblclick', function () {
     scaleImg3.classList.toggle('large');
 });
 
-const scaleImg4 = document.querySelector('.content-destination img');
 scaleImg4.addEventListener('dblclick', function () {
     scaleImg4.classList.toggle('large');
 });
