@@ -11,6 +11,7 @@ let scaleImg = document.querySelector('img');
 let scaleImg2 = document.querySelector('.img-content img');
 let scaleImg3 = document.querySelector('.img-fluid');
 let scaleImg4 = document.querySelector('.content-destination img');
+let buttons = document.querySelectorAll('.btn');
 
 
 
@@ -19,16 +20,16 @@ let scaleImg4 = document.querySelector('.content-destination img');
 
 // Add event #1: mouseover, mouseleave for Fun Bus logo
 
-logoHeadHover.addEventListener('mouseover', function (e) {
-    e.target.style.fontSize = '5rem';
-    e.target.style.cursor = 'pointer';
-    e.target.style.transitionDuration = '.2s';
-    e.target.style.color = 'dodgerblue';
+logoHeadHover.addEventListener('mouseover', function (event) {
+    event.target.style.fontSize = '5rem';
+    event.target.style.cursor = 'pointer';
+    event.target.style.transitionDuration = '.2s';
+    event.target.style.color = 'dodgerblue';
 
 });
-logoHeadHover.addEventListener('mouseleave', function (e) {
-    e.target.style.fontSize = '';
-    e.target.style.color = 'black';
+logoHeadHover.addEventListener('mouseleave', function (event) {
+    event.target.style.fontSize = '';
+    event.target.style.color = 'black';
 });
 
 
@@ -85,10 +86,10 @@ images.forEach(function (img) {
 // Add event #5: scroll - after scrolling enough, alert will show
 let counter = 0;
 window.addEventListener("scroll", function (event) {
-    console.log("scroll!");
+    console.log("scroll counter!");
     counter++;
     if (counter > 200) {
-        alert("You Have Activated The Scroll Alert. Hello :)");
+        alert("You have activated the scroll alert. Hello :)");
         counter = 0;
     }
 });
@@ -103,4 +104,12 @@ window.addEventListener("resize", function (event) {
 //Add event #7: load - when the page loads successfully, a message is logged to the console
 window.addEventListener("load", function (event) {
     console.log("Fun Bus has loaded successfully. Enjoy our content!");
+});
+
+
+// Add event #8: click
+buttons.forEach(function (btn) {
+    btn.addEventListener('click', function (event) {
+        alert('We will be in touch with you shortly!');
+    });
 });
