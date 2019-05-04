@@ -17,7 +17,7 @@ let scaleImg4 = document.querySelector('.content-destination img');
 // Events
 
 
-// Add event: mouseover, mouseleave for Fun Bus logo
+// Add event #1: mouseover, mouseleave for Fun Bus logo
 
 logoHeadHover.addEventListener('mouseover', function (e) {
     e.target.style.fontSize = '5rem';
@@ -30,7 +30,7 @@ logoHeadHover.addEventListener('mouseleave', function (e) {
 });
 
 
-// Add event: mouseover, mouseleave for nav-items
+// Add event #2: mouseover, mouseleave for nav-items
 
 navItems.forEach(function (item) {
     item.addEventListener('mouseover', function (event) {
@@ -48,7 +48,7 @@ navItems.forEach(function (item) {
 });
 
 
-// Add event: dblclick and transform for all images on page
+// Add event #3: dblclick and transform for all images on page
 // double click any image to transform its size, double click again to return to normal
 
 scaleImg.addEventListener('dblclick', function () {
@@ -68,7 +68,7 @@ scaleImg4.addEventListener('dblclick', function () {
 });
 
 
-// Add event: Add opacity to images when mouseover is active, remove opacity when mouseleave is active
+// Add event #4: Add opacity to images when mouseover is active, remove opacity when mouseleave is active
 images.forEach(function (img) {
     img.addEventListener('mouseenter', function (item) {
         img.style.opacity = '.3';
@@ -80,14 +80,13 @@ images.forEach(function (img) {
 });
 
 
-
-
+// Add event #5: scroll - after scrolling enough, alert will show
 let counter = 0;
 window.addEventListener("scroll", function (event) {
     console.log("scroll!");
     counter++;
     if (counter > 200) {
-        alert("You've scrolled too much!!");
+        alert("You Have Activated The Scroll Alert. Hello :)");
         counter = 0;
     }
 });
