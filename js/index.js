@@ -40,14 +40,18 @@ navItems.forEach(function (item) {
         event.target.style.color = 'dodgerblue'
         event.target.style.fontSize = '2.2rem';
         event.target.style.transitionDuration = '.2s';
-        event.preventDefault();
-
     });
     item.addEventListener('mouseout', function (event) {
         event.target.style.color = 'black';
         event.target.style.fontSize = '';
-        event.preventDefault();
     });
+
+    // NAV links do not reload the page, check the console log to see a message
+
+    item.addEventListener('click', (event => {
+        event.preventDefault();
+        console.log('You have clicked a nav link');
+    }));
 });
 
 
@@ -81,7 +85,7 @@ images.forEach(function (img) {
 // Add event #4: Add opacity to images when mouseover is active, remove opacity when mouseleave is active
 images.forEach(function (img) {
     img.addEventListener('mouseenter', function (item) {
-        img.style.opacity = '.3';
+        img.style.opacity = '.7';
         img.style.cursor = 'pointer';
     });
     img.addEventListener('mouseleave', function (item) {
