@@ -90,3 +90,9 @@ window.addEventListener("scroll", function (event) {
         counter = 0;
     }
 });
+
+
+//Add event: resize
+window.addEventListener("resize", function (event) {
+    alert("You have activated the resizing alert. Hello again :)");
+});
