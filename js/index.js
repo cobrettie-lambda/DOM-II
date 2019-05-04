@@ -26,8 +26,24 @@ navItemHover.addEventListener('mouseout', function (e) {
 });
 
 
-// scale for fun-bus.jpg
+// dblclick and transform for all images on page
+// double click any image to transform its size, double click again to return to normal
 const scaleImg = document.querySelector('img');
 scaleImg.addEventListener('dblclick', function () {
     scaleImg.classList.toggle('large');
+});
+
+const scaleImg2 = document.querySelector('.img-content img');
+scaleImg2.addEventListener('dblclick', function () {
+    scaleImg2.classList.toggle('large');
+});
+
+const scaleImg3 = document.querySelector('.img-fluid');
+scaleImg3.addEventListener('dblclick', function () {
+    scaleImg3.classList.toggle('large');
+});
+
+const scaleImg4 = document.querySelector('.content-destination img');
+scaleImg4.addEventListener('dblclick', function () {
+    scaleImg4.classList.toggle('large');
 });
