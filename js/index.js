@@ -128,7 +128,7 @@ window.addEventListener("resize", function (event) {
 
 //Add event #7: load - when the page loads successfully, a message is logged to the console
 window.addEventListener("load", function (event) {
-    console.log("Fun Bus has loaded successfully. Enjoy our content!");
+    console.log("Fun Bus has loaded successfully. Please, enjoy the content we have provided for you :)");
 });
 
 
@@ -159,3 +159,5 @@ footer.addEventListener('contextmenu', (event) => {
 footer.addEventListener('click', (event) => {
     event.target.style.backgroundColor = '#FFEBCD';
 });
+
+// Cobrettie Garner
